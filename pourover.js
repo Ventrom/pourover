@@ -627,7 +627,7 @@ var PourOver = (function() {
       });
       this.items = this.items.concat(new_items);
       this.regenerateFilterSets(new_items);
-      this.trigger("change", _(new_items).pluck("cid"));
+      this.trigger("change", _.pluck(new_items, "cid"));
     },
 
     // Remove items from the collection, triggering the appropriate events to keep all dependent sort and filter sets up-to-date.
